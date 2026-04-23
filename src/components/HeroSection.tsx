@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import companyImage from "@/assets/company-image.png";
+import HeroDiagram from "./HeroDiagram";
 
 const HeroSection = () => {
   const scrollTo = (href: string) => {
@@ -109,48 +109,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="hidden lg:block lg:col-span-5 relative"
           >
-            <div className="relative">
-              {/* Glow halo behind image */}
-              <div className="absolute -inset-8 bg-gradient-energy opacity-20 blur-3xl rounded-full" />
-              <div className="absolute -inset-4 bg-electric-blue/20 blur-2xl rounded-full" />
-
-              {/* Image with dark blend mask */}
-              <div
-                className="relative rounded-2xl overflow-hidden"
-                style={{
-                  maskImage:
-                    "radial-gradient(ellipse 95% 90% at 50% 50%, black 55%, transparent 100%)",
-                  WebkitMaskImage:
-                    "radial-gradient(ellipse 95% 90% at 50% 50%, black 55%, transparent 100%)",
-                }}
-              >
-                <img
-                  src={companyImage}
-                  alt="湖南硅基数能科技 · 数据中心与新能源场景"
-                  className="w-full h-auto object-cover"
-                  style={{ filter: "saturate(0.92) contrast(1.05) brightness(0.92)" }}
-                />
-                {/* Dark overlay tint to harmonize with hero */}
-                <div
-                  className="absolute inset-0 mix-blend-multiply"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, hsl(var(--ink) / 0.55) 0%, hsl(var(--navy) / 0.35) 50%, hsl(var(--ink) / 0.55) 100%)",
-                  }}
-                />
-                {/* Top color wash */}
-                <div
-                  className="absolute inset-0 mix-blend-overlay opacity-60"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, hsl(var(--electric-blue) / 0.35), transparent 50%, hsl(var(--energy-green) / 0.3))",
-                  }}
-                />
-              </div>
-
-              {/* Subtle frame */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
-            </div>
+            <HeroDiagram />
           </motion.div>
         </div>
 
