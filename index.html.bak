@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>湖南硅基数能科技有限公司 | 数据中心与能源解决方案服务商</title>
+<meta name="description" content="湖南硅基数能科技有限公司，聚焦数据中心基础设施、热能管理、电能管理、模块化数据中心、储能系统与智能监控产品。">
+<style>
+:root{--bg:#f5f8fc;--card:#fff;--text:#1d2a39;--muted:#64748b;--line:#e5edf5;--brand:#0f4c81;--brand2:#1985d0;--accent:#2db36b;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
+.wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
+.brandbox{display:flex;align-items:center;gap:14px;min-width:0}
+.brandbox img{width:52px;height:52px;object-fit:contain;border-radius:12px;background:#fff;border:1px solid var(--line);padding:4px}
+.brandtext strong{display:block;font-size:18px;color:#102033}.brandtext span{display:block;font-size:12px;color:var(--muted)}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.hero{background:radial-gradient(circle at 80% 18%, rgba(45,179,107,.18), transparent 24%),linear-gradient(135deg, rgba(15,76,129,.98), rgba(25,133,208,.94));color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);background-size:48px 48px;pointer-events:none}
+.grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:28px;align-items:center}
+.eyebrow{display:inline-flex;padding:7px 12px;border-radius:999px;margin-bottom:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:13px}
+h1{margin:0 0 16px;font-size:clamp(32px,4.8vw,54px);line-height:1.15}
+.lead{margin:0 0 22px;color:rgba(255,255,255,.92);font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:700}
+.btn.primary{background:#fff;color:var(--brand)}.btn.ghost{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18)}
+.tagrow{display:flex;gap:10px;flex-wrap:wrap}.tag{padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:13px}
+.visual{display:flex;flex-direction:column;gap:14px}
+.visual-card{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.18);border-radius:26px;padding:18px;backdrop-filter:blur(8px);box-shadow:0 18px 48px rgba(0,0,0,.12)}
+.visual-card img{display:block;width:100%;height:auto;aspect-ratio:1280/853;object-fit:contain;border-radius:20px}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.metric{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px}
+.metric strong{display:block;font-size:22px;margin-bottom:6px}
+section{padding:64px 0}h2{margin:0 0 10px;font-size:30px;color:#102033}.sub{margin:0 0 24px;color:var(--muted)}
+.cards2,.cards3{display:grid;gap:20px}.cards2{grid-template-columns:1.1fr .9fr}.cards3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 10px 28px rgba(16,32,51,.06)}
+.card h3{margin:0 0 12px;font-size:22px;color:#102033}.brandcard{position:relative;overflow:hidden}
+.brandcard:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--brand),var(--accent))}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#eef6ff;color:var(--brand);font-size:12px;font-weight:700;margin-bottom:12px}
+.list{margin:14px 0 0;padding:0;list-style:none}.list li{padding:9px 0;border-bottom:1px dashed var(--line)}.list li:last-child{border-bottom:none}
+.productmini{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.mini{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}.mini b{display:block;margin-bottom:4px;color:#102033;font-size:14px}
+.icon{width:46px;height:46px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f2ff,#eefbf1);color:var(--brand);font-weight:900;margin-bottom:12px}
+.contact-item{padding:12px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border-bottom:none}.contact-label{color:var(--muted);font-size:13px}.contact-value{color:#102033;font-weight:700;font-size:16px;margin-top:4px}
+.notice{margin-top:16px;padding:14px 16px;border-radius:14px;background:#fff8e8;color:#8a6500;border:1px solid #f6e0a8;font-size:14px}
+.footer{background:#102033;color:rgba(255,255,255,.84);padding:24px 0}.footerbox{display:flex;justify-content:space-between;gap:16px;align-items:center}.footer strong{color:#fff}
+@media (max-width:980px){.grid,.cards2,.cards3,.footerbox{grid-template-columns:1fr;display:grid}.hero{padding-top:64px}}
+@media (max-width:720px){.nav{flex-direction:column;align-items:flex-start}.metrics{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <div class="brandbox">
+    <img src="assets/logo.webp" alt="硅基数能 LOGO" width="52" height="52">
+    <div class="brandtext"><strong>湖南硅基数能科技有限公司</strong><span>Hunan Silicon Energy Technology Co., Ltd.</span></div>
+  </div>
+  <nav class="navlinks"><a href="#about">公司简介</a><a href="#brands">代理品牌</a><a href="#solutions">解决方案</a><a href="#service">服务能力</a><a href="#contact">联系我们</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap grid">
+  <div>
+    <div class="eyebrow">数据中心与能源解决方案服务商</div>
+    <h1>连接算力基础设施，赋能绿色能源未来</h1>
+    <p class="lead">湖南硅基数能科技有限公司聚焦数据中心基础设施、精密制冷、供配电、模块化机房与储能系统，以方案整合、产品供应、项目交付和服务协同为核心，面向政府、企业、园区、工业与新型算力场景提供一体化解决方案。</p>
+    <div class="actions"><a class="btn primary" href="#contact">获取方案咨询</a><a class="btn ghost" href="#brands">查看代理品牌</a></div>
+    <div class="tagrow"><span class="tag">数据中心基础设施</span><span class="tag">精密空调与制冷</span><span class="tag">UPS与智能配电</span><span class="tag">储能系统</span><span class="tag">模块化机房</span></div>
+  </div>
+  <div class="visual">
+    <div class="visual-card"><img src="assets/hero.webp" alt="硅基数能品牌主视觉" width="1280" height="853" fetchpriority="high" decoding="async"></div>
+    <div class="metrics">
+      <div class="metric"><strong>一站式</strong><span>覆盖需求沟通、方案设计、设备选型、项目交付与运维协同。</span></div>
+      <div class="metric"><strong>二十四小时服务</strong><span>提供及时的技术支持与售后协同，保障关键基础设施稳定运行。</span></div>
+      <div class="metric"><strong>三大品牌</strong><span>整合艾特网能、合肥铂兰特与智能监控类产品资源。</span></div>
+      <div class="metric"><strong>多场景</strong><span>适配数据中心、企业机房、园区配套、工业场景与储能项目。</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2>公司简介</h2>
+  <p class="sub">以可靠产品为基础，以系统方案为核心，以服务能力为保障，为客户打造更高效、更稳定、更节能的基础设施系统。</p>
+  <div class="cards2">
+    <div class="card"><h3>企业定位</h3><p>湖南硅基数能科技有限公司是数据中心基础设施与能源解决方案服务商，围绕艾特网能的数据中心基础设施产品线、合肥铂兰特的储能与新能源产品线以及智能监控类产品开展市场服务与项目落地。</p><p>公司业务覆盖方案咨询、设备选型、产品供应、系统集成、项目实施与售后支持，致力于为客户构建安全、稳定、节能、可扩展的基础设施底座。</p></div>
+    <div class="card"><h3>核心价值</h3><ul class="list"><li><b>专业：</b>围绕机房与能源系统，提供更贴合项目场景的方案配置。</li><li><b>可靠：</b>联合成熟品牌与产品体系，提升系统稳定性与交付确定性。</li><li><b>高效：</b>快速响应，缩短沟通链路，提高项目推进效率。</li><li><b>节能：</b>关注制冷效率、供配电效率与储能利用效率，帮助客户优化能耗。</li></ul></div>
+  </div>
+</div></section>
+
+<section id="brands"><div class="wrap">
+  <h2>代理品牌</h2>
+  <p class="sub">轻量化上线版优先保证访问速度与稳定性，产品展示采用轻量信息卡结构；后续可按需替换为官网高清产品图。</p>
+  <div class="cards3">
+    <div class="card brandcard"><span class="badge">Brand 01</span><h3>艾特网能 iTEAQ</h3><p>聚焦热能管理、电能管理与模块化数据中心解决方案，适用于企业机房、园区算力节点与各类关键业务场景。</p><div class="productmini"><div class="mini"><b>热能管理</b><span>精密空调、行级制冷、节能冷却</span></div><div class="mini"><b>电能管理</b><span>UPS、配电、列头柜与PDU</span></div><div class="mini"><b>数据中心</b><span>模块化机房与一体化交付</span></div><div class="mini"><b>运维配套</b><span>节能优化与服务支持</span></div></div></div>
+    <div class="card brandcard"><span class="badge">Brand 02</span><h3>合肥铂兰特 PLENTY</h3><p>围绕工商业储能、PACK 配套和工程机械电动化产品，服务于储能项目、设备配套与新能源应用场景。</p><div class="productmini"><div class="mini"><b>储能系统</b><span>工商业储能柜与系统集成</span></div><div class="mini"><b>PACK 系列</b><span>电池系统与配套方案</span></div><div class="mini"><b>移动储能</b><span>特种应用与灵活部署</span></div><div class="mini"><b>电动化配套</b><span>工程机械与设备升级</span></div></div></div>
+    <div class="card brandcard"><span class="badge">Brand 03</span><h3>智能监控类产品</h3><p>面向机房环境、动环监测、能源可视化与远程管理等场景，提升设备监控与告警联动效率。</p><div class="productmini"><div class="mini"><b>动环监控</b><span>环境量、开关量与告警联动</span></div><div class="mini"><b>边缘接入</b><span>网关、传感器与采集单元</span></div><div class="mini"><b>远程可视化</b><span>平台化监测与状态展示</span></div><div class="mini"><b>能耗管理</b><span>设备状态与能耗数据分析</span></div></div></div>
+  </div>
+</div></section>
+
+<section id="solutions"><div class="wrap">
+  <h2>核心解决方案</h2><p class="sub">面向不同项目类型，提供从单一设备到系统级整合的灵活服务模式。</p>
+  <div class="cards3">
+    <div class="card"><div class="icon">01</div><h3>数据中心机房方案</h3><p>包括精密空调、UPS、配电系统、列头柜、PDU、模块化机房等，适用于企业机房、IDC、边缘节点和园区算力基础设施建设。</p></div>
+    <div class="card"><div class="icon">02</div><h3>节能制冷方案</h3><p>结合风冷、自然冷、行级制冷等路线，面向不同热密度和部署环境，帮助客户优化 PUE 与全年运行能耗。</p></div>
+    <div class="card"><div class="icon">03</div><h3>储能系统方案</h3><p>围绕工商业储能、移动储能与设备配套场景，提供储能柜、集装箱系统、PACK 配套及应用集成服务。</p></div>
+    <div class="card"><div class="icon">04</div><h3>智能监控方案</h3><p>面向机房环境、动环监测与关键设备状态可视化需求，提供更高效的智能监控与告警联动能力。</p></div>
+    <div class="card"><div class="icon">05</div><h3>项目集成与交付</h3><p>支持从需求调研、设备配置、系统联动到现场交付的全流程协同，提升项目实施效率与交付质量。</p></div>
+    <div class="card"><div class="icon">06</div><h3>售后服务协同</h3><p>依托品牌方与服务能力，协助客户做好设备运行保障、问题响应与后续扩容升级支持。</p></div>
+  </div>
+</div></section>
+
+<section id="service"><div class="wrap">
+  <h2>服务能力展示</h2><p class="sub">从产品到方案、从单点到系统，帮助客户把复杂项目拆解为可执行的工程路径。</p>
+  <div class="cards3">
+    <div class="card" style="border-left:4px solid var(--accent)"><h3>方案定制能力</h3><p>根据客户场景、负载等级、后备时间、制冷形式和扩容需求，提供更贴合实际的配置建议。</p></div>
+    <div class="card" style="border-left:4px solid var(--accent)"><h3>品牌整合能力</h3><p>围绕艾特网能、合肥铂兰特及智能监控类产品进行跨系统整合与项目配套，提升整体解决方案完整度。</p></div>
+    <div class="card" style="border-left:4px solid var(--accent)"><h3>持续服务能力</h3><p>便于客户进行需求沟通、现场对接、交付协同和长期维护支持，保障项目全生命周期运行。</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>联系我们</h2><p class="sub">欢迎咨询数据中心基础设施、储能系统、模块化机房、智能监控与项目配套合作。</p>
+  <div class="cards2">
+    <div class="card"><h3>公司信息</h3><div class="contact-item"><div class="contact-label">公司名称</div><div class="contact-value">湖南硅基数能科技有限公司</div></div><div class="contact-item"><div class="contact-label">主营方向</div><div class="contact-value">数据中心基础设施 / 储能系统 / 智能监控 / 项目集成服务</div></div><div class="contact-item"><div class="contact-label">合作品牌</div><div class="contact-value">艾特网能、合肥铂兰特、智能监控类产品</div></div></div>
+    <div class="card"><h3>联系入口</h3><div class="contact-item"><div class="contact-label">联系人</div><div class="contact-value">夏小姐</div></div><div class="contact-item"><div class="contact-label">联系电话</div><div class="contact-value">19973906319</div></div><div class="contact-item"><div class="contact-label">电子邮箱</div><div class="contact-value">hngjsn@126.com</div></div><div class="contact-item"><div class="contact-label">办公地址</div><div class="contact-value">湖南省长沙市岳麓区学士街道云栖路559号艾邦科技产业园2栋</div></div>
+</div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="wrap footerbox"><div><strong>湖南硅基数能科技有限公司</strong><br>数据中心与能源解决方案服务商</div><div>© 2026 Hunan Silicon Energy Technology Co., Ltd.</div></div></footer>
+</body></html>
