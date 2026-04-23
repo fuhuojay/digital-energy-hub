@@ -44,14 +44,14 @@ const SolutionsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative p-7 rounded-2xl bg-card shadow-card hover:shadow-card-hover border border-border/60 hover:border-energy-green/40 transition-all overflow-hidden"
             >
-              <div className="absolute -right-4 -top-2 text-7xl font-black text-foreground/[0.04] tracking-tighter select-none">
-                {s.idx}
-              </div>
-              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/10 to-energy-green/10 text-electric-blue flex items-center justify-center mb-5 group-hover:bg-gradient-energy group-hover:text-white transition-all">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/10 to-energy-green/10 text-electric-blue flex items-center justify-center group-hover:bg-gradient-energy group-hover:text-white transition-all">
                 <s.icon size={22} />
+                </div>
+                <span className="text-xs font-semibold tracking-widest text-energy-green">{s.idx}</span>
               </div>
-              <h3 className="relative text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-              <p className="relative text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

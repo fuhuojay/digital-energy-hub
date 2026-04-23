@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Shield, Zap, Leaf } from "lucide-react";
+import companyImage from "@/assets/company-image.png";
 
 const values = [
   { icon: Target, title: "专业", desc: "围绕机房与能源系统，提供更贴合项目场景的方案配置。" },
@@ -16,6 +17,21 @@ const TrustBand = () => {
   return (
     <section id="about" className="py-20 md:py-28 bg-surface-subtle relative overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="relative rounded-3xl overflow-hidden mb-16 shadow-card-hover"
+        >
+          <img
+            src={companyImage}
+            alt="湖南硅基数能科技有限公司 · 数据中心与新能源场景"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-border/40 rounded-3xl" />
+        </motion.div>
+
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
