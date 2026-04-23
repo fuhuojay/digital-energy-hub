@@ -55,11 +55,19 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
         },
+        ink: "hsl(var(--ink))",
+        "electric-blue": {
+          DEFAULT: "hsl(var(--electric-blue))",
+          light: "hsl(var(--electric-blue-light))",
+        },
         teal: {
           DEFAULT: "hsl(var(--teal))",
           light: "hsl(var(--teal-light))",
         },
-        "energy-green": "hsl(var(--energy-green))",
+        "energy-green": {
+          DEFAULT: "hsl(var(--energy-green))",
+          light: "hsl(var(--energy-green-light))",
+        },
         "surface-dark": "hsl(var(--surface-dark))",
         "surface-subtle": "hsl(var(--surface-subtle))",
         sidebar: {
