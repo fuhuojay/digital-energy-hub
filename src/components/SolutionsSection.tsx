@@ -1,33 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Server, Zap, Wind, Battery, Monitor } from "lucide-react";
+import { Server, Snowflake, Battery, Monitor, Settings, LifeBuoy } from "lucide-react";
 
 const solutions = [
-  {
-    icon: Server,
-    title: "模块化数据中心",
-    desc: "预制化、标准化的模块化数据中心解决方案，快速部署，灵活扩展，满足不同规模的算力需求。",
-  },
-  {
-    icon: Zap,
-    title: "UPS 与供配电系统",
-    desc: "高可靠不间断电源及智能配电方案，保障关键负载持续稳定运行，支持多级冗余架构。",
-  },
-  {
-    icon: Wind,
-    title: "精密温控系统",
-    desc: "行级、房间级、列间精密空调，精准控温控湿，优化气流组织，降低制冷能耗。",
-  },
-  {
-    icon: Battery,
-    title: "储能集成方案",
-    desc: "锂电池储能系统与数据中心供电深度融合，实现削峰填谷、应急备电与绿色用能。",
-  },
-  {
-    icon: Monitor,
-    title: "智能监控与运维",
-    desc: "数据中心基础设施管理平台（DCIM），实时监控、智能告警、能效分析，提升运维效率。",
-  },
+  { idx: "01", icon: Server, title: "数据中心机房方案", desc: "包括精密空调、UPS、配电系统、列头柜、PDU、模块化机房等，适用于企业机房、IDC、边缘节点和园区算力基础设施建设。" },
+  { idx: "02", icon: Snowflake, title: "节能制冷方案", desc: "结合风冷、自然冷、行级制冷等路线，面向不同热密度和部署环境，帮助客户优化 PUE 与全年运行能耗。" },
+  { idx: "03", icon: Battery, title: "储能系统方案", desc: "围绕工商业储能、移动储能与设备配套场景，提供储能柜、集装箱系统、PACK 配套及应用集成服务。" },
+  { idx: "04", icon: Monitor, title: "智能监控方案", desc: "面向机房环境、动环监测与关键设备状态可视化需求，提供更高效的智能监控与告警联动能力。" },
+  { idx: "05", icon: Settings, title: "项目集成与交付", desc: "支持从需求调研、设备配置、系统联动到现场交付的全流程协同，提升项目实施效率与交付质量。" },
+  { idx: "06", icon: LifeBuoy, title: "售后服务协同", desc: "依托品牌方与服务能力，协助客户做好设备运行保障、问题响应与后续扩容升级支持。" },
 ];
 
 const SolutionsSection = () => {
@@ -35,22 +16,22 @@ const SolutionsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="solutions" className="py-20 md:py-28" ref={ref}>
+    <section id="solutions" className="py-20 md:py-28 bg-surface-subtle" ref={ref}>
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="max-w-2xl mb-14"
         >
-          <span className="text-xs font-semibold tracking-widest uppercase text-accent mb-3 block">
-            Solutions
+          <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-energy-green mb-4 block">
+            Solutions · 核心解决方案
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-            核心解决方案
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4 leading-tight">
+            从单一设备到系统级整合的灵活服务
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            围绕数据中心全生命周期，提供端到端的基础设施解决方案
+          <p className="text-muted-foreground leading-relaxed">
+            面向不同项目类型，提供从方案咨询、设备选型到系统集成与运维协同的端到端服务。
           </p>
         </motion.div>
 
@@ -61,13 +42,16 @@ const SolutionsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group p-7 rounded-2xl bg-card shadow-card hover:shadow-card-hover border border-transparent hover:border-accent/20 transition-all"
+              className="group relative p-7 rounded-2xl bg-card shadow-card hover:shadow-card-hover border border-border/60 hover:border-energy-green/40 transition-all overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+              <div className="absolute -right-4 -top-2 text-7xl font-black text-foreground/[0.04] tracking-tighter select-none">
+                {s.idx}
+              </div>
+              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-electric-blue/10 to-energy-green/10 text-electric-blue flex items-center justify-center mb-5 group-hover:bg-gradient-energy group-hover:text-white transition-all">
                 <s.icon size={22} />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              <h3 className="relative text-lg font-semibold text-foreground mb-3">{s.title}</h3>
+              <p className="relative text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

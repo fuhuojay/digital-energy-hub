@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustBand from "@/components/TrustBand";
+import BrandsSection from "@/components/BrandsSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
-import WhyUsSection from "@/components/WhyUsSection";
 import ScenariosSection from "@/components/ScenariosSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -13,9 +13,9 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <TrustBand />
+    <BrandsSection />
     <SolutionsSection />
     <CapabilitiesSection />
-    <WhyUsSection />
     <ScenariosSection />
     <ContactSection />
     <Footer />
