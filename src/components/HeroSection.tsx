@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -10,27 +11,36 @@ const HeroSection = () => {
     <section className="relative min-h-[100vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover opacity-70 mix-blend-screen" />
+        {/* Radial glow */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(ellipse 80% 60% at 70% 30%, hsl(var(--energy-green) / 0.18), transparent 60%), radial-gradient(ellipse 60% 50% at 20% 80%, hsl(var(--electric-blue) / 0.20), transparent 60%)",
+          }}
+        />
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `linear-gradient(hsl(var(--teal) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--teal) / 0.3) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
+            backgroundImage: `linear-gradient(hsl(var(--electric-blue) / 0.4) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--electric-blue) / 0.4) 1px, transparent 1px)`,
+            backgroundSize: "72px 72px",
+            maskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent 80%)",
           }}
         />
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-20">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wide bg-accent/20 text-energy-green border border-energy-green/20 mb-6">
-              数字能源 · 智慧基础设施
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide bg-primary-foreground/[0.06] text-energy-green-light border border-energy-green/30 backdrop-blur-sm mb-7">
+              <Sparkles size={12} />
+              数据中心与能源解决方案服务商
             </span>
           </motion.div>
 
@@ -38,56 +48,91 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-tight mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.08] tracking-tight mb-7"
           >
-            构筑数字能源基座
+            连接算力基础设施
             <br />
-            <span className="text-teal-light">驱动数据中心未来</span>
+            <span className="text-gradient-energy">赋能绿色能源未来</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mb-10 leading-relaxed"
+            className="text-base md:text-lg text-primary-foreground/70 max-w-2xl mb-10 leading-relaxed"
           >
-            以可靠供电、精密温控、智能管理为核心，为数据中心及关键基础设施提供全生命周期的数字能源解决方案与工程交付服务。
+            湖南硅基数能科技有限公司聚焦数据中心基础设施、精密制冷、供配电、模块化机房与储能系统，以方案整合、产品供应、项目交付和服务协同为核心，面向政府、企业、园区、工业与新型算力场景提供一体化解决方案。
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-3 mb-14"
           >
             <button
               onClick={() => scrollTo("#contact")}
-              className="px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-semibold text-sm hover:bg-teal-light transition-colors shadow-lg shadow-teal/20"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-energy text-white font-semibold text-sm hover:opacity-90 transition-all shadow-lg shadow-energy-green/30"
             >
-              联系我们 · 获取方案
+              获取方案咨询
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
-              onClick={() => scrollTo("#solutions")}
-              className="px-8 py-3.5 rounded-lg border border-primary-foreground/25 text-primary-foreground font-medium text-sm hover:bg-primary-foreground/10 transition-colors"
+              onClick={() => scrollTo("#brands")}
+              className="px-7 py-3.5 rounded-lg border border-primary-foreground/20 text-primary-foreground font-medium text-sm hover:bg-primary-foreground/[0.06] backdrop-blur-sm transition-colors"
             >
-              查看解决方案
+              查看代理品牌
             </button>
           </motion.div>
+
+          {/* Tag chips */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="flex flex-wrap gap-2 max-w-3xl"
+          >
+            {["数据中心基础设施", "精密空调与制冷", "UPS 与智能配电", "储能系统", "模块化机房", "智能监控"].map((t) => (
+              <span key={t} className="px-3 py-1.5 rounded-full text-xs text-primary-foreground/70 bg-primary-foreground/[0.05] border border-primary-foreground/10 backdrop-blur-sm">
+                {t}
+              </span>
+            ))}
+          </motion.div>
         </div>
+
+        {/* Floating metric cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="hidden lg:grid grid-cols-4 gap-4 mt-20 max-w-5xl"
+        >
+          {[
+            { k: "一站式", v: "方案 · 选型 · 交付 · 运维" },
+            { k: "24h", v: "全天候技术支持响应" },
+            { k: "三大", v: "核心代理品牌资源整合" },
+            { k: "多场景", v: "数据中心 · 储能 · 工业" },
+          ].map((m) => (
+            <div key={m.k} className="rounded-2xl p-5 bg-primary-foreground/[0.04] border border-primary-foreground/10 backdrop-blur-md">
+              <div className="text-2xl font-bold text-gradient-energy mb-1.5">{m.k}</div>
+              <div className="text-xs text-primary-foreground/60 leading-relaxed">{m.v}</div>
+            </div>
+          ))}
+        </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-primary-foreground/40 text-xs">向下滚动</span>
+          <span className="text-primary-foreground/35 text-[10px] tracking-widest uppercase">Scroll</span>
           <div className="w-5 h-8 rounded-full border border-primary-foreground/30 flex items-start justify-center p-1">
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1 h-1.5 rounded-full bg-primary-foreground/60"
+              className="w-1 h-1.5 rounded-full bg-energy-green"
             />
           </div>
         </motion.div>

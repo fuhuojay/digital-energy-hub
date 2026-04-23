@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "关于我们", href: "#about" },
+  { label: "公司简介", href: "#about" },
+  { label: "代理品牌", href: "#brands" },
   { label: "解决方案", href: "#solutions" },
-  { label: "产品能力", href: "#capabilities" },
-  { label: "为何选择我们", href: "#why-us" },
+  { label: "服务能力", href: "#capabilities" },
   { label: "应用场景", href: "#scenarios" },
   { label: "联系我们", href: "#contact" },
 ];
@@ -36,13 +37,18 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4 lg:px-8">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-            <span className="text-accent-foreground font-bold text-sm">硅</span>
+        <a href="#" className="flex items-center gap-3 min-w-0">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${scrolled ? "bg-secondary" : "bg-primary-foreground/10 backdrop-blur"}`}>
+            <img src={logo} alt="硅基数能" className="w-7 h-7 object-contain" />
           </div>
-          <span className={`font-heading font-semibold text-lg tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            硅基数能
-          </span>
+          <div className="flex flex-col leading-tight min-w-0">
+            <span className={`font-heading font-semibold text-sm md:text-base tracking-tight transition-colors truncate ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
+              湖南硅基数能科技
+            </span>
+            <span className={`hidden md:block text-[10px] tracking-widest uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-primary-foreground/55"}`}>
+              Hunan Silicon Energy
+            </span>
+          </div>
         </a>
 
         {/* Desktop nav */}
