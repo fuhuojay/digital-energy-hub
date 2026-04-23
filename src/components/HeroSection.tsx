@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import companyImage from "@/assets/company-image.png";
 
 const HeroSection = () => {
   const scrollTo = (href: string) => {
@@ -32,7 +33,8 @@ const HeroSection = () => {
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-20">
-        <div className="max-w-4xl">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          <div className="lg:col-span-7 max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +50,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.08] tracking-tight mb-7"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-[1.08] tracking-tight mb-7"
           >
             连接算力基础设施
             <br />
@@ -59,7 +61,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base md:text-lg text-primary-foreground/70 max-w-2xl mb-10 leading-relaxed"
+            className="text-base text-primary-foreground/70 mb-9 leading-relaxed"
           >
             湖南硅基数能科技有限公司聚焦数据中心基础设施、精密制冷、供配电、模块化机房与储能系统，以方案整合、产品供应、项目交付和服务协同为核心，面向政府、企业、园区、工业与新型算力场景提供一体化解决方案。
           </motion.p>
@@ -68,7 +70,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap gap-3 mb-14"
+            className="flex flex-wrap gap-3 mb-10"
           >
             <button
               onClick={() => scrollTo("#contact")}
@@ -90,13 +92,65 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="flex flex-wrap gap-2 max-w-3xl"
+            className="flex flex-wrap gap-2"
           >
             {["数据中心基础设施", "精密空调与制冷", "UPS 与智能配电", "储能系统", "模块化机房", "智能监控"].map((t) => (
               <span key={t} className="px-3 py-1.5 rounded-full text-xs text-primary-foreground/70 bg-primary-foreground/[0.05] border border-primary-foreground/10 backdrop-blur-sm">
                 {t}
               </span>
             ))}
+          </motion.div>
+          </div>
+
+          {/* Right: company image blended into dark hero */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="hidden lg:block lg:col-span-5 relative"
+          >
+            <div className="relative">
+              {/* Glow halo behind image */}
+              <div className="absolute -inset-8 bg-gradient-energy opacity-20 blur-3xl rounded-full" />
+              <div className="absolute -inset-4 bg-electric-blue/20 blur-2xl rounded-full" />
+
+              {/* Image with dark blend mask */}
+              <div
+                className="relative rounded-2xl overflow-hidden"
+                style={{
+                  maskImage:
+                    "radial-gradient(ellipse 95% 90% at 50% 50%, black 55%, transparent 100%)",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 95% 90% at 50% 50%, black 55%, transparent 100%)",
+                }}
+              >
+                <img
+                  src={companyImage}
+                  alt="湖南硅基数能科技 · 数据中心与新能源场景"
+                  className="w-full h-auto object-cover"
+                  style={{ filter: "saturate(0.92) contrast(1.05) brightness(0.92)" }}
+                />
+                {/* Dark overlay tint to harmonize with hero */}
+                <div
+                  className="absolute inset-0 mix-blend-multiply"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, hsl(var(--ink) / 0.55) 0%, hsl(var(--navy) / 0.35) 50%, hsl(var(--ink) / 0.55) 100%)",
+                  }}
+                />
+                {/* Top color wash */}
+                <div
+                  className="absolute inset-0 mix-blend-overlay opacity-60"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, hsl(var(--electric-blue) / 0.35), transparent 50%, hsl(var(--energy-green) / 0.3))",
+                  }}
+                />
+              </div>
+
+              {/* Subtle frame */}
+              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
+            </div>
           </motion.div>
         </div>
 
@@ -105,7 +159,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="hidden lg:grid grid-cols-4 gap-4 mt-20 max-w-5xl"
+          className="hidden lg:grid grid-cols-4 gap-4 mt-16"
         >
           {[
             { k: "一站式", v: "方案 · 选型 · 交付 · 运维" },
