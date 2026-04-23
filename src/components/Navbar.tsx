@@ -23,9 +23,12 @@ const Navbar = () => {
   }, []);
 
   const handleClick = (href: string) => {
-    setMobileOpen(false);
     const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    // Delay closing menu so scroll can start before animation removes elements
+    setTimeout(() => setMobileOpen(false), 300);
   };
 
   return (
@@ -42,8 +45,8 @@ const Navbar = () => {
             <img src={logo} alt="硅基数能" className="w-7 h-7 object-contain" />
           </div>
           <div className="flex flex-col leading-tight min-w-0">
-            <span className={`font-heading font-semibold text-sm md:text-base tracking-tight transition-colors truncate ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              湖南硅基数能科技
+            <span className={`font-heading font-semibold text-sm tracking-tight transition-colors truncate ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
+              湖南硅基数能科技有限公司
             </span>
             <span className={`hidden md:block text-[10px] tracking-widest uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-primary-foreground/55"}`}>
               Hunan Silicon Energy
