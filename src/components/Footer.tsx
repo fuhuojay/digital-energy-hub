@@ -33,7 +33,9 @@ const Footer = () => (
           © {new Date().getFullYear()} 湖南硅基数能科技有限公司 版权所有
         </p>
         <p className="text-[11px] text-primary-foreground/45">
-          Hunan Silicon Energy Technology Co., Ltd.
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
+            湘ICP备2026011757号
+          </a>
         </p>
       </div>
     </div>

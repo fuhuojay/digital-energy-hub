@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone, Mail, MapPin, User, ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import engineerPhoto from "@/assets/engineer-photo.png";
 
 const contactItems = [
   { icon: User, label: "联系人", value: "夏小姐" },
@@ -126,11 +127,29 @@ const ContactSection = () => {
                     pointerEvents: "none",
                   }}
                 />
+                {/* Engineer photo — positioned right side (where the red box was) */}
+                <img
+                  src={engineerPhoto}
+                  alt="湖南硅基数能工程师"
+                  className="absolute"
+                  style={{
+                    right: "2rem",
+                    top: "2rem",
+                    bottom: "2rem",
+                    height: "calc(100% - 4rem)",
+                    width: "auto",
+                    maxWidth: "calc(50% - 1rem)",
+                    borderRadius: "12px",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.35)",
+                    objectFit: "cover",
+                    zIndex: 3,
+                  }}
+                />
                 {/* Text content */}
                 <div
                   style={{
                     position: "relative",
-                    zIndex: 3,
+                    zIndex: 4,
                     height: "100%",
                     padding: "2.5rem 3rem",
                     display: "flex",
